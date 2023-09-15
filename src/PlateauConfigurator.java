@@ -89,6 +89,7 @@ public class PlateauConfigurator extends JFrame implements ActionListener {
     public void posicionIncialRover(){
 
         //Frame frameP = new JFrame("Control Rover on the Plateau-P");
+        frameP.setTitle("..* Rover configuration * ...");
         frameP.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameP.setSize( 400, 200);
         frameP.setLocationRelativeTo(null);
@@ -104,7 +105,6 @@ public class PlateauConfigurator extends JFrame implements ActionListener {
         gbc1.anchor = GridBagConstraints.EAST;
 
 
-        // Agregar KeyListener para detectar "Enter" en Sentido inicial
         panelRoverInicial.add(new JLabel("Posición inicial en X:", SwingConstants.RIGHT));
         xInicialTextField = new JTextField(10);
         panelRoverInicial.add(xInicialTextField);
