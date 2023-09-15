@@ -44,18 +44,18 @@ public class PlateauConfigurator extends JFrame implements ActionListener {
         //Se configura el área de la meseta, el número de secciones que se dividirá para formar los espacios donde se podrá
         // mover el rover, número de posibles obstáculos que tendrá la meseta
         //JPanel panel = new JPanel();
-
+        framePla.setTitle("..* plateau configuration * ...");
         framePla.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         framePla.setSize( 400, 200);
         framePla.setLocationRelativeTo(null);
 
         panelConfigPlateau.setLayout(new GridLayout(5, 2));
-
+/*
         setTitle("..* plateau configuration * ...");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 200);
         setLocationRelativeTo(null);
-
+*/
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.anchor = GridBagConstraints.EAST;
 
@@ -195,7 +195,6 @@ public class PlateauConfigurator extends JFrame implements ActionListener {
     }
 
 
-    ///---------------------------------------------correcto-------------------------------------------------
     @Override
     //Configurar las rutas de los botones
     public void actionPerformed(ActionEvent e) {
