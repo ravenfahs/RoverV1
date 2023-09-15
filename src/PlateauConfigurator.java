@@ -294,10 +294,14 @@ public class PlateauConfigurator extends JFrame implements ActionListener {
                                 int y = rowPoint * plateau.getGridSize() + plateau.getGridSize() / 2;
                                 System.out.println("X: " + columnPoint + " Y: " + rowPoint);
                                 if (x >= 0 && x < plateau.getWidth() && y >= 0 && y < plateau.getHeight()) {
-                                    elementos.add(new GridElement(x, y, "0", GridElementType.OBSTACLE));
-                                    panelConfigPlateau.setVisible(false);
+                                    if(isPositionOccupied(x,y)){
+                                        elementos.add(new GridElement(x, y, "0", GridElementType.OBSTACLE));
+                                        panelConfigPlateau.setVisible(false);
+                                        coordenadasCorrectas = true; // Las coordenadas son correctas, sal del bucle
+                                    }else{
+                                        JOptionPane.showMessageDialog(this, "El lugar ya esta ocupado, por favor utiliza otras coordenadas..");
+                                    }
 
-                                    coordenadasCorrectas = true; // Las coordenadas son correctas, sal del bucle
                                 } else {
                                     JOptionPane.showMessageDialog(this, "El obstáculo está fuera de la región. Los valores de X o Y Deben ser menores que "+ plateau.getTamañoGrid());
                                 }
